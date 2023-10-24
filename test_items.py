@@ -8,6 +8,7 @@ class TestMainPage1():
 
     def test_check_the_cart(self, browser):
         browser.get(link)
+        print("Got link")
         button = browser.find_element(By.ID, "#add_to_basket_form")
         button.click()
         print("\nButton found, clicked")
