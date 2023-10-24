@@ -6,7 +6,7 @@ import time
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 class TestMainPage1():
 
-    def check_the_cart(self, browser):
+    def test_check_the_cart(self, browser):
         browser.get(link)
         button = browser.find_element(By.ID, "#add_to_basket_form")
         button.click()
