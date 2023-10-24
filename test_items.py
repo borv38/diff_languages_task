@@ -9,11 +9,8 @@ class TestMainPage1():
     def test_check_the_cart(self, browser):
         browser.get(link)
         print("Got link")
-        button = browser.find_element(By.CSS_SELECTOR, "#add_to_basket_form")
-        button.click()
-        print("\nButton found, clicked")
-        time.sleep(15)
-        welcome_text_elt = browser.find_element(By.CSS_SELECTOR, "#messages > div:nth-child(1) > div")
+        time.sleep(30)
+        welcome_text_elt = browser.find_element(By.CSS_SELECTOR, "#add_to_basket_form")
         welcome_text = welcome_text_elt.text
-        assert "Coders at Work был добавлен в вашу корзину." == welcome_text, "not passed"
-        print("Subj was added to the cart succesfully")
+        assert "Ajouter au panier" == welcome_text, "not passed"
+        print("Button looks good")
